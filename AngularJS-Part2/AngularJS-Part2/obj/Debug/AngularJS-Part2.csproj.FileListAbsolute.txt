@@ -1,0 +1,6 @@
+C:\Users\Brij\Desktop\ebook\samples\Day2\AngularJS-Part2\AngularJS-Part2\bin\AngularJS-Part2.dll.config
+C:\Users\Brij\Desktop\ebook\samples\Day2\AngularJS-Part2\AngularJS-Part2\bin\AngularJS-Part2.dll
+C:\Users\Brij\Desktop\ebook\samples\Day2\AngularJS-Part2\AngularJS-Part2\bin\AngularJS-Part2.pdb
+C:\Users\Brij\Desktop\ebook\samples\Day2\AngularJS-Part2\AngularJS-Part2\obj\Debug\AngularJS-Part2.csprojResolveAssemblyReference.cache
+C:\Users\Brij\Desktop\ebook\samples\Day2\AngularJS-Part2\AngularJS-Part2\obj\Debug\AngularJS-Part2.dll
+C:\Users\Brij\Desktop\ebook\samples\Day2\AngularJS-Part2\AngularJS-Part2\obj\Debug\AngularJS-Part2.pdb
