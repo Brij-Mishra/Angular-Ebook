@@ -1,0 +1,63 @@
+﻿@model string
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">    
+    eventModule.factory("InitialLoadService", function () {
+            return {
+                talks : @Html.Raw(Model)
+            };
+        });
+</script>   
+<script src="~/Scripts/Events/eventcontroller.js"></script>
+<div class="container">
+    <h2>Talk Details</h2>
+    <div class="row" ng-controller="eventController">
+        <table class="table table-condensed table-hover">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Speaker</th>
+                <th>Venue</th>
+                <th>Duration</th>
+            </tr>
+            <tr ng-repeat="talk in talks">
+                <td> {{talk.id}}</td>
+                <td> {{talk.name}}</td>
+                <td> {{talk.speaker}}</td>
+                <td> {{talk.venue}}</td>
+                <td> {{talk.duration}}</td>
+            </tr>
+        </table>
+
+    </div>
+</div>
+
+
+@*<div class="container" ng-init="courses = [
+    {number : '1001' , name : 'ASPNET from Scratch', trainer : 'Brij Bhushan Mishra'},
+    {number : '1002' , name : 'Node js', trainer : 'Dhananjay Kumar'},
+    {number : '1003' , name : 'ASPNET WebAPI', trainer : 'Suchit Khanna'}
+    ]">
+
+        <div class="row">
+           
+                <table class="table table-condensed table-hover">
+                    <tr>
+                        <th> Course</th>
+                        <th>Name</th>
+                        <th>Trainer</th>
+                    </tr>
+                    <tr ng-repeat="course in courses">
+                        <td> {{course.number}}</td>
+                        <td> {{course.name}}</td>
+                        <td> {{course.trainer}}</td>
+                    </tr>
+                </table>
+
+            </div>
+    
+
+    </div>*@
