@@ -1,0 +1,23 @@
+﻿@model string
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/Events/speakerController.js"></script>
+<script src="~/Scripts/Events/eventcontroller.js"></script>
+<script src="~/Scripts/Events/talkController.js"></script>
+<div class="container">
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li class="navbar-brand"><a href="#Talks">Talks</a></li>
+                <li class="navbar-brand"><a href="#Speakers">Speakers</a></li>
+                <li class="navbar-brand"><a href="#AddTalk">Add Talk</a></li>
+            </ul>
+
+        </div>
+    </div>
+    <div ng-view>
+
+    </div>
+</div>

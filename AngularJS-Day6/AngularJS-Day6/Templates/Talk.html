@@ -1,0 +1,21 @@
+﻿<div class="container">
+    <h2>Talk Details</h2>
+    <div class="row">
+        <table class="table table-condensed table-hover">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Speaker</th>
+                <th>Venue</th>
+                <th>Duration</th>
+            </tr>
+            <tr ng-repeat="talk in talks">
+                <td> {{talk.id}}</td>
+                <td> {{talk.name}}</td>
+                <td> {{talk.speaker}}</td>
+                <td> {{talk.venue}}</td>
+                <td> {{talk.duration}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
