@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Custom Directive Example 2</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script language="javascript" type="text/javascript">
+        var myangularapp = angular.module("myangularapp", []);
+
+        myangularapp.directive('myelementdirective', function () {
+            var directive = {};
+            directive.restrict = 'E'; //restrict this directive to elements
+            directive.template = "Hello {{name}} !! Welcome to this Angular App";
+            return directive;
+        });
+
+        myangularapp.controller("mycontroller", function ($scope) {
+            $scope.name = 'Brij';
+        });
+
+    </script>
+</head>
+<body ng-app="myangularapp" ng-controller="mycontroller">
+    <myelementdirective></myelementdirective>
+</body>
+</html>

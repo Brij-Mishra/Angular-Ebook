@@ -1,0 +1,6 @@
+C:\Users\Brij\Desktop\ebook\samples\Day9\Angular-Day9\Angular-Day9\bin\Angular-Day9.dll.config
+C:\Users\Brij\Desktop\ebook\samples\Day9\Angular-Day9\Angular-Day9\bin\Angular-Day9.dll
+C:\Users\Brij\Desktop\ebook\samples\Day9\Angular-Day9\Angular-Day9\bin\Angular-Day9.pdb
+C:\Users\Brij\Desktop\ebook\samples\Day9\Angular-Day9\Angular-Day9\obj\Debug\Angular-Day9.csprojResolveAssemblyReference.cache
+C:\Users\Brij\Desktop\ebook\samples\Day9\Angular-Day9\Angular-Day9\obj\Debug\Angular-Day9.dll
+C:\Users\Brij\Desktop\ebook\samples\Day9\Angular-Day9\Angular-Day9\obj\Debug\Angular-Day9.pdb
