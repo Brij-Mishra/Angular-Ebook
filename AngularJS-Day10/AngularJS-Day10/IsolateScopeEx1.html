@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script language="javascript" type="text/javascript">
+    var myangularapp = angular.module("myangularapp", []);
+    myangularapp.controller("mycontroller", function ($scope) {
+        $scope.talk = { name : 'Building modern web apps with ASP.NET 5', duration : '60m'}
+    });
+    myangularapp.directive('attrcustomdirective', function() {
+        var directive = {
+            restrict : 'E', // restrict this directive to elements
+            scope : { talkname: '@talk' },
+            template : "<div>{{talkname}}</div> ",
+        };
+        return directive;
+    });
+    </script>
+</head>
+<body ng-app="myangularapp" ng-controller="mycontroller">
+    <attrcustomdirective talk="{{talk.name}}" />
+</body>
+</html>
