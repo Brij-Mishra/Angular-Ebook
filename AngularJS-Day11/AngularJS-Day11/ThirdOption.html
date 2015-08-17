@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Custom Directive with Isolate Scope - Second Option</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script language="javascript" type="text/javascript">
+        var myangularapp = angular.module("myangularapp", []);
+        myangularapp.controller("mycontroller", function ($scope) {
+            $scope.talk = {
+                name: 'Building Modern web apps with ASP.NET5',
+                duration: '45m'
+            };
+
+            $scope.UpdateData = function (modifiedName) {
+                $scope.talk = {
+                    name: modifiedName,
+                    duration: '45m'
+                };
+            };
+        });
+
+
+        myangularapp.directive('expcustomdirective', function () {
+            var directive = {
+                restrict: 'E', // restrict this directive to elements
+                scope: { method: '&expr', talkname: '@' },
+                template: "<div>{{talkname}}</div> <input type='button' " +
+                    "ng-click='method({updatedName : NewTalkName})' value='Update Data'/> ",
+                link: function (scope, element, attrs) {
+                    scope.NewTalkName = attrs.talknewname;
+                }
+            }
+            return directive;
+        });
+
+
+
+    </script>
+</head>
+<body ng-app="myangularapp" ng-controller="mycontroller">
+    <expcustomdirective expr="UpdateData(updatedName)" talkname="{{talk.name}}" talknewname="Update Talk name via attribute" />
+</body>
+</html>
