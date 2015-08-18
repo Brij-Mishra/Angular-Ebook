@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+    <body style="font-family: verdana; font-size: small">
+        <div ng-app>
+            <div class="container" ng-init="courses = [
+    {number : '1001' , name : 'ASPNET 5 from Scratch', trainer : 'Brij Bhushan Mishra'},
+    {number : '1002' , name : 'Node js', trainer : 'Dhananjay Kumar'},
+    {number : '1003' , name : 'ASPNET WebAPI', trainer : 'Suchit Khanna'},
+    {number : '1004' , name : 'WCF Exception handling', trainer : 'Anil Kumar'} ]">
+                
+                <div class="row">
+                    <input type="text" ng-model="searchText"/>
+                    <table class="table table-condensed table-hover">
+                        <tr>
+                            <th>Course</th> <th>Name</th> <th>Trainer</th>
+                        </tr>
+                        <tr ng-repeat="course in courses |filter : searchText | orderBy : 'name' : true">
+                            <td> {{course.number}}</td>
+                            <td> {{course.name}}</td>
+                            <td> {{course.trainer}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            </div>
+</body>
+</html>

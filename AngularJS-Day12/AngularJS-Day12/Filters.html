@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title><script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>   
+</head>
+    <body style="font-family: verdana; font-size: small">
+        <div ng-app >
+            Enter Your name <br />
+            First Name : <input type="text" ng-model="firstName" /> 
+            Last Name : <input type="text" ng-model="lastName" /> <br />                                            
+            <span> Entered Name - {{firstName | uppercase}} {{lastName | lowercase}} 
+                Prize Money : {{ 1250 | currency}}</span>    
+             
+        </div>
+    </body>
+</html>
