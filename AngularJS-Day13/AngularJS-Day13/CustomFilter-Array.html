@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script type="text/javascript">
+        var myangularapp = angular.module('myangularapp', []);
+
+        myangularapp.filter('RemoveSpecialCharacters', function () {
+            return function (items) {
+                var filtered = [];
+
+                for (var i = 0; i < items.length; i++) {
+                    var item = items[i];
+                    filtered.push(item.replace(/[^\w\s]/gi, ''));
+                }
+                return filtered;
+            };
+        });
+    </script>
+</head>
+<body style="font-family: verdana ; font-size: small">
+
+    <div ng-app="myangularapp">
+        <div class="container"
+             ng-init="textValues = ['ab$h#cde&fg@','ba$h#dcj&fe@k#','ab$hm*hdp&ef@','ab$h#cdj&hg$ed@']">
+            <div class="row">
+                <table class="table table-condensed">
+                    <tr ng-repeat="textval in textValues | RemoveSpecialCharacters">
+                        <td> {{textval}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
