@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+
+    <script type="text/javascript">
+        var myangularapp = angular.module('myangularapp', []);
+
+        myangularapp.filter('ConvertoPhone', function () {
+            return function (item) {
+                var temp = ("" + item).replace(/\D/g, '');
+                var temparr = temp.match(/^(\d{3})(\d{3})(\d{4})$/);
+                return (!temparr) ? null : "(" + temparr[1] + ") " + temparr[2] + "-" + temparr[3];
+            };
+        });
+
+        // Injecting Filter in Factor
+        myangularapp.factory("myCustomService", function ($filter) {
+            return {
+                filteredData: $filter('uppercase')('brij'),
+                filteredDatalower: $filter('lowercase')('Mishra')
+            };
+        });
+
+        // Injecting Filter in Service
+        myangularapp.service('myCustomServiceV2', function ($filter) {
+            this.filteredData = $filter('uppercase')('brij');
+        });
+
+        myangularapp.controller("mycontroller", function ($scope, myCustomService, myCustomServiceV2) {
+            $scope.filteredvalueUsingService = myCustomService.filteredData;
+            $scope.filteredvalueUsingServicelower = myCustomService.filteredDatalower;
+
+            $scope.filteredvalueUsingServiceV2 = myCustomServiceV2.filteredData;
+        });
+
+    </script>
+</head>
+<body style="font-family: verdana ; font-size: small">
+    <div ng-app="myangularapp" ng-controller="mycontroller">
+        {{filteredvalueUsingService}} {{filteredvalueUsingServicelower}} <br /> {{filteredvalueUsingServiceV2}}
+    </div>
+</body>
+</html>

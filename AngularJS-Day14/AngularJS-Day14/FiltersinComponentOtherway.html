@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+
+    <script type="text/javascript">
+        var myangularapp = angular.module('myangularapp', []);
+
+        myangularapp.filter('ConvertoPhone', function () {
+            return function (item) {
+                var temp = ("" + item).replace(/\D/g, '');
+                var temparr = temp.match(/^(\d{3})(\d{3})(\d{4})$/);
+                return (!temparr) ? null : "(" + temparr[1] + ") " + temparr[2] + "-" + temparr[3];
+            };
+        });
+
+        myangularapp.controller("mycontroller", function ($scope, uppercaseFilter, lowercaseFilter, currencyFilter, ConvertoPhoneFilter) {
+            $scope.filteredvalueUpperCase = uppercaseFilter('brij');
+            $scope.filteredvaluelowercase = lowercaseFilter('Mishra');
+            $scope.filteredvaluecurrency = currencyFilter('1250');
+
+            // Custom Filter
+            $scope.filteredphonenovalue = ConvertoPhoneFilter('1234567891');
+        });
+
+    </script>
+</head>
+<body style="font-family: verdana ; font-size: small">
+<div ng-app="myangularapp" ng-controller="mycontroller">
+    <span>
+        Name - {{filteredvalueUpperCase}} {{filteredvaluelowercase}} <br />
+        Prize Money : {{ filteredvaluecurrency}} <br />
+        
+        Phone Number : {{filteredphonenovalue}}
+    </span>   
+</div>
+</body>
+</html>
