@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title><script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>  
+    
+    <script type="text/javascript">
+        var myangularapp = angular.module('myangularapp', []);
+
+        // Providing a number and assigning to Value object
+        myangularapp.value("NumberofItems", 40);
+
+        // Providing a string and assigning to value object
+        myangularapp.value("ApplicationHeader", "AngularApp with DI using value");
+
+        // Providing a current date and assigning to value object
+        myangularapp.value("Person", { name: 'Tom', Age : 31, City : 'Florida' });
+
+        // Providing a current date and assigning to value object
+        myangularapp.value("Time", new Date());
+
+        // Now these value can be used where we require like controller factor service. These values are initialized while loading
+
+
+        myangularapp.controller("mycontroller", function($scope, NumberofItems, ApplicationHeader, Person, Time) {
+            $scope.ApplicationHeader = ApplicationHeader;
+            $scope.CurTime = Time;
+            $scope.itemCount = NumberofItems;
+            $scope.Person = Person;
+        });
+
+    </script>
+
+</head>
+    <body style="font-family: Verdana">
+        <div ng-app="myangularapp" ng-controller="mycontroller">
+            <h2>{{ApplicationHeader}}</h2>
+            <h3>Time when created : {{CurTime}}</h3>
+            <h4>We need to show {{itemCount}} items</h4>
+            <h4>Name : {{ Person.name}}</h4>
+        </div>
+    </body>
+</html>

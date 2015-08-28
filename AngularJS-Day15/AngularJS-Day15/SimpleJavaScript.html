@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript">
+
+        function MessageGenerator() {
+        }
+
+        MessageGenerator.prototype.getMessage = function() {
+            return 'My new custom message';
+        };
+
+
+        function logMessage() {
+            var messageCreator = new MessageGenerator();
+            var message = messageCreator.getMessage();
+            alert(message + ' logged at ' + new Date());
+        }
+
+        function EventLogger() {
+        }
+
+        EventLogger.prototype.logEvent = function () {
+            logMessage();
+        };
+
+        function FolderWacther() {
+            var myEventLogger = new EventLogger();
+            myEventLogger.logEvent();
+        }
+
+        FolderWacther();
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

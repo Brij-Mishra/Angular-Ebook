@@ -1,0 +1,6 @@
+C:\Users\Brij\Desktop\ebook\samples\Day15\AngularJS-Day15\AngularJS-Day15\bin\AngularJS-Day15.dll.config
+C:\Users\Brij\Desktop\ebook\samples\Day15\AngularJS-Day15\AngularJS-Day15\bin\AngularJS-Day15.dll
+C:\Users\Brij\Desktop\ebook\samples\Day15\AngularJS-Day15\AngularJS-Day15\bin\AngularJS-Day15.pdb
+C:\Users\Brij\Desktop\ebook\samples\Day15\AngularJS-Day15\AngularJS-Day15\obj\Debug\AngularJS-Day15.csprojResolveAssemblyReference.cache
+C:\Users\Brij\Desktop\ebook\samples\Day15\AngularJS-Day15\AngularJS-Day15\obj\Debug\AngularJS-Day15.dll
+C:\Users\Brij\Desktop\ebook\samples\Day15\AngularJS-Day15\AngularJS-Day15\obj\Debug\AngularJS-Day15.pdb

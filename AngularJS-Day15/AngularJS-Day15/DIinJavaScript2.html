@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script language="javascript">
+        // Lowest level object MessageGenerator 
+        function MessageGenerator() {
+        }
+
+        MessageGenerator.prototype.getMessage = function() {
+            return 'My new custom message';
+        };
+
+        // logMessage function taking MessageGenerator's instance as parameter
+        function logMessage(messageCreator) {
+            var message = messageCreator.getMessage();
+            alert(message + ' logged at ' + new Date());
+        }
+
+        // Constructor Injection of logMessage and MessageGenerator
+        function EventLogger(logm, creator) {
+            this.logger = logm;
+            this.messageCreater = creator;
+        }
+
+        EventLogger.prototype.logEvent = function () {
+            this.logger(this.messageCreater);
+        };
+
+
+        function FolderWacther(myEventLogger) {
+            myEventLogger.logEvent();
+        }
+
+        // Calling FolderWacther and passing the two dependencies
+        FolderWacther(new EventLogger(logMessage, new MessageGenerator()));
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
