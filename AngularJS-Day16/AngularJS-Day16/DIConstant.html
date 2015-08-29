@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script type="text/javascript" language="javascript">
+        var myangularapp = angular.module('myangularapp', []);
+
+        // Providing a number and assigning to Value object
+        myangularapp.provider('RequestProcessor', function () {
+
+            var requestId = '00000000';
+            var applicationName = 'Default request processor';
+
+            this.setrequestId = function (value) {
+                requestId = value;
+            };
+
+            this.setApplicationName = function (value1) {
+                applicationName = value1;
+            };
+
+            this.$get = function () {
+                return applicationName +  " is processing Request Id : " + requestId;
+            };
+        });
+
+        // Adding objects via Constant
+        myangularapp.constant('applicationName', 'CodeWala request processor');
+        myangularapp.constant('applicationmetainfo', {
+            version: '1.0'
+        });
+
+        // Objects set via Constant type passed here (Value or other type cannot be passed as discussed in the post)
+        myangularapp.config(function (applicationName, applicationmetainfo, RequestProcessorProvider) {
+            RequestProcessorProvider.setrequestId("123456");
+            RequestProcessorProvider.setApplicationName(applicationName);
+        });
+
+        myangularapp.controller("mycontroller", function ($scope, RequestProcessor) {
+            $scope.statusmessage = RequestProcessor;
+        });
+
+    </script>
+</head>
+<body style="font-family: Verdana">
+    <div ng-app="myangularapp" ng-controller="mycontroller">
+        <h4>{{statusmessage}}</h4>
+    </div>
+</body>
+</html>

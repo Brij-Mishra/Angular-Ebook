@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="Scripts/Provider/myangularapp.js"></script>
+    <script src="Scripts/Provider/myangularappProvider.js"></script>
+    <script src="Scripts/Provider/myangularappController.js"></script>
+    <script type="text/javascript" language="javascript">
+
+        // Conguring the same provider with different request id
+        myangularapp.config(["RequestProcessorProvider", function (RequestProcessorProvider) {
+            RequestProcessorProvider.setrequestId("5678");
+        }]);
+
+    </script>
+</head>
+<body style="font-family: Verdana">
+    <div ng-app="myangularapp" ng-controller="mycontroller">
+        <h4>{{statusmessage}}</h4>
+    </div>
+</body>
+</html>

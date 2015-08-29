@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script type="text/javascript" language="javascript">
+        var myangularapp = angular.module('myangularapp', []);
+       
+        myangularapp.service('Circle', function() {
+
+            var pi = 3.14;          
+            this.Area = function (r) {
+                return pi * r * r;
+            }
+            this.Circuimference = function (r) {
+                return 2* pi * r;
+            }          
+        });
+
+        myangularapp.controller("mycontroller", function ($scope, Circle) {
+            $scope.AreaofCircle = Circle.Area(5);
+            $scope.CircuimferenceOfCircle = Circle.Circuimference(5);
+
+        });
+    </script>
+</head>
+<body style="font-family: Verdana">
+    <div ng-app="myangularapp" ng-controller="mycontroller">
+        <h4>Area of the circle : {{AreaofCircle}}</h4>
+        <h4>Circumference of the circle : {{ CircuimferenceOfCircle}}</h4>
+    </div>
+</body>
+</html>
