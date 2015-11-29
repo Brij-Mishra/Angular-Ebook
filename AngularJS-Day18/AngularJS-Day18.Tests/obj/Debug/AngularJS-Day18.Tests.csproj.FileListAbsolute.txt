@@ -1,0 +1,17 @@
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\AngularJS-Day18.Tests.dll
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\AngularJS-Day18.Tests.pdb
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\AngularJS-Day18.dll
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\System.Web.Razor.dll
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\AngularJS-Day18.pdb
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\System.Web.Razor.xml
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\obj\Debug\AngularJS-Day18.Tests.csprojResolveAssemblyReference.cache
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\obj\Debug\AngularJS-Day18.Tests.dll
+C:\Data\Work\Mine\ebook\samples\Day18\AngularJS-Day18\AngularJS-Day18.Tests\obj\Debug\AngularJS-Day18.Tests.pdb
