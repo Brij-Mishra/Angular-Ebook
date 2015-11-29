@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Talk Details</h2>
+<div class="container">
+    <div class="row" ng-controller="talkController">
+        <bindcustomdirective talkdetails="talk" />{{talk.name}}
+
+    </div>{{'1234567891' | ConvertoPhone}}
+</div>
+
